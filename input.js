@@ -17,10 +17,14 @@ const handleUserInput = (key) => {
     connection.write('Move: down');
   }
   if (key === 'd') {
-    console.log('right ');
+    // console.log('right ');
     // process.stdin.write('Move: right');
     connection.write('Move: right');
   }
+  if (key === 'i') {
+    connection.write('Say: I am SPONICUS!!!!')
+  }
+
   if (key === '\u0003') {
     process.exit();
   }
