@@ -7,13 +7,13 @@ const connect = () => {
   conn.setEncoding('utf8');
   //notification of connection
   conn.on('connect', () => {
-    console.log('connected');
+    console.log('Successfully connected to game');
+    conn.write('Name: SOP');
   });
   //event handler
   conn.on('data', (data) => {
     console.log('Server says: ', data);
   });
-
   return conn;
 };
 
